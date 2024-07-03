@@ -1,3 +1,3 @@
 # Halex.gg
 # OFFICAL MAIN PAGE
-# MrStateGaming1.github.io/halex.gg
+Halex Main Page IS [HERE](https://mrstategaming1.github.io/Halex.gg/)
