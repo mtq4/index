@@ -4,56 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service - BHE Hosting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1, h2 {
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.6;
+            transition: color 0.3s ease;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        section:last-child {
+            margin-bottom: 0;
+        }
+
+        .dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .dark-mode header {
+            border-bottom: 1px solid #555;
+        }
+
+        .dark-mode h1, .dark-mode h2 {
+            color: #fff;
+        }
+
+        .dark-mode p {
+            color: #ccc;
+        }
+
+        .toggle-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            z-index: 1000;
+        }
+
+        .toggle-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
-<style>
- body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-}
-
-header {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-h1 {
-    color: #333;
-    font-size: 32px;
-}
-
-h2 {
-    color: #555;
-    font-size: 24px;
-    margin-top: 30px;
-}
-
-p {
-    color: #666;
-    line-height: 1.6;
-}
-
-section {
-    margin-bottom: 30px;
-}
-
-section:last-child {
-    margin-bottom: 0;
-}
-
-</style>
 <body>
-    <div class="container">
+    <div class="container" id="container">
         <header>
             <h1>Terms of Service</h1>
             <p>Effective Date: [Insert Date]</p>
@@ -95,5 +125,17 @@ section:last-child {
             <p>Provide contact information for inquiries regarding your Terms of Service.</p>
         </section>
     </div>
+
+    <button class="toggle-button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    <script>
+        function toggleDarkMode() {
+            const container = document.getElementById('container');
+            const body = document.body;
+            
+            container.classList.toggle('dark-mode');
+            body.classList.toggle('dark-mode');
+        }
+    </script>
 </body>
 </html>
